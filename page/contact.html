@@ -6,7 +6,7 @@
     <meta name="description" content="Hổ trợ học lập trình">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TECHNOLOGY - Học lập trình</title>
+    <title>TECHNO - Học lập trình</title>
     <link rel="shortcut icon" href="../images/shortcut-icon.jpg">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
@@ -15,10 +15,10 @@
 </head>
 <body>
     <nav class="menu flex">
-        <div class="col12 logo">
+        <div class="col10 logo">
             <a href="../index.html"><img src="../images/logo.png" alt="logo"></a>
         </div>
-        <ul class="option flex col48">
+        <ul class="option flex col65">
             <li>
                 <a href="../index.html">
                     <i class="fa-solid fa-house"></i>
@@ -75,20 +75,27 @@
             </li>
         </ul>
 
-        <div class="find col25">
-            <input type="text" id="kw" placeholder="Nhập ngôn ngữ muốn học...">
-            <button id="btn-search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
+        <div class="find col20">
+            <form action="" id="search-box">
+                <input type="text" name="" id="search-text" placeholder="Bạn muốn tìm gì?" required>
+                <button id="search-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
         </div>
 
-        <div class="acc col15">
-            <a href="login.html">
-                <input type="submit" value="Đăng nhập">
+        <div class="acc col5">
+            <a href="#">
+                <i class="fa-solid fa-circle-user"></i>
             </a>
-            <a href="signup.html">
-                <input type="submit" value="Đăng ký">
-            </a>
+            <ul class="acc__list">
+                <li>
+                    <a href="login.html">Đăng nhập</a>
+                </li>
+                <li>
+                    <a href="signup.html">Đăng ký</a>
+                </li>
+            </ul>
         </div>
     </nav>
     
@@ -127,7 +134,7 @@
                 <div>
                     <h3>Email</h3>
                     <p>
-                        <a href="mailto:nguyenhoaitam16082003@gmail.com">nguyenhoaitam16082003@gmail.com</a>
+                        <a href="mailto:techno.edu@gmail.com">techno.edu@gmail.com</a>
                     </p>
                 </div>
             </div>
@@ -135,28 +142,28 @@
         <div clas="contact_r">
             <p>
                 <label>
-                    Họ tên *
+                    Họ tên<sup>(*)</sup>
                     <br/>
                     <span>
-                        <input type="text">
+                        <input type="text" id="contactNameId">
                     </span>
                 </label>
             </p>
             <p>
                 <label>
-                    Email *
+                    Email<sup>(*)</sup>
                     <br/>
                     <span>
-                        <input type="email">
+                        <input type="email" id="contactEmailId">
                     </span>
                 </label>
             </p>
             <p>
                 <label>
-                    Số điện thoại *
+                    Số điện thoại<sup>(*)</sup>
                     <br/>
                     <span>
-                        <input type="text">
+                        <input type="text" id="contactPhoneId">
                     </span>
                 </label>
             </p>
@@ -165,11 +172,16 @@
                     Nội dung
                     <br/>
                     <span>
-                        <textarea name="" id="" cols="50" rows="10"></textarea>
+                        <textarea name="" id="contactContentId" cols="50" rows="10"></textarea>
                     </span>
                 </label>
             </p>
-            <input class="send" type="button" value="Gửi">  
+
+            <i>(*) Nội dung bắt buộc điền</i>
+            <br />
+            <br />
+
+            <input class="send" type="button" value="Gửi" onclick="contact()">  
         </div>
         
     </section>
@@ -184,7 +196,7 @@
                     </li>
                     <li>
                         <i class="fa-solid fa-envelope"></i>
-                        <a href="mailto:nguyenhoaitam16082003@gmail.com">nguyenhoaitam16082003@gmail.com</a>
+                        <a href="mailto:techno.edu@gmail.com">techno.edu@gmail.com</a>
                     </li>
                     <li>
                         <i class="fa-solid fa-house-chimney"></i>

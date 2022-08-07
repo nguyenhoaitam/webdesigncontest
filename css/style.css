@@ -1,8 +1,12 @@
+:root {
+    --main-color: #B9D3EE;
+    --hd-color: #BBBBBB;
+}
+
 * {
     font-family: Helvetica, Arial, sans-serif;
     box-sizing: border-box;
 }
-
 
 .flex {
     display: flex;
@@ -13,6 +17,14 @@
     display: flex;
 }
 
+.col5 {
+    width: 5%;
+}
+
+.col10 {
+    width: 10%;
+}
+
 .col12 {
     width: 12%;
 }
@@ -21,20 +33,32 @@
     width: 15%;
 }
 
-.col25 {
-    width: 25%;
+.col20 {
+    width: 20%;
 }
 
 .col23 {
-    width: 23%;
+    width: 22%;
+}
+
+.col25 {
+    width: 25%;
 }
 
 .col33 {
     width: 33.33%;
 }
 
+.col40 {
+    width: 40%;
+}
+
 .col48 {
     width: 48%;
+}
+
+.col65 {
+    width: 65%;
 }
 
 body {
@@ -44,7 +68,7 @@ body {
 /* CSS NAV - MENU */
 
 nav.menu {
-    background-color: #B9D3EE;
+    background-color: var(--main-color);
     position: relative;
 }
 
@@ -60,15 +84,22 @@ ul.option {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+ul.option > li {
+    position: relative;
 }
 
 ul.option > li > a {
     text-decoration: none;
     text-align: center;
     text-transform: uppercase;
+    font-weight: bold;
     color: #000000;
     display: block;
-    min-width: 130px;
+    min-width: 140px;
     padding: 15px 20px;
 } 
 
@@ -77,29 +108,102 @@ ul.option > li:hover a {
 }
 
 div.find {
-    margin: auto 0;
+    display: flex;
+    justify-content: right;
+    align-items: center;
 }
 
-div.find > input[type=text] {
-    width: 70%;
-    padding: 7px 12px;
-    border-radius: 15px;
+#search-box {
+    background: #fff;
+    border-radius: 50px;
 }
 
-div.find > button {
+#search-box #search-text {
+    border: none;
+    outline: none;
+    background: none;
+    /* padding: 5px 10px; */
+    padding: 0;
+    font-size: 16px;
+    width: 0;
+    transition: all .25s ease-in-out;
+}
+
+#search-box:hover #search-text, #search-box #search-text:valid { /*valid có nhập vào không đóng text*/
+    width: 200px;
+    padding: 5px 0 5px 10px;
+}
+
+#search-btn {
+    border: none;
+    outline: none;
+    background: #FFF;
+    cursor: pointer;
     padding: 5px 10px;
-    border-radius: 10px;
+    border-radius: 50%;
 }
 
 div.acc {
-    margin: auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-div.acc input[type=submit] {
-    padding: 10px;
-    width: 100px;
+div.acc > a > i {
+    font-size: 2rem;
+    color: #000;
 }
 
+ul.acc__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 4rem;
+    right: 0.5rem;
+    display: none;
+}
+
+ul.acc__list::before {
+    content: "";
+    height: 10px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    transform: translateY(-100%);
+}
+
+.acc__list li:first-child:before {
+    content: "";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid var(--main-color);
+    position: absolute;
+    transform: translateY(-100%);
+    top: 0;
+    right: 1.3rem;
+}
+
+ul.acc__list li:hover {
+    font-size: 17px;
+}
+
+div.acc:hover ul.acc__list {
+    display: block;
+}
+
+ul.acc__list > li > a {
+    color: #000;
+    text-decoration: none;
+}
+
+ul.acc__list li {
+    background-color: var(--main-color);
+    width: 130px;
+    padding: 5px 10px;
+    text-align: center;
+}
 
 /* CSS SUB-MENU */
 
@@ -108,7 +212,7 @@ ul.sub {
     position: absolute;
     padding: 0;
     margin: 0;
-    background-color: #B9D3EE;;
+    background-color: var(--main-color);
     width: 280px;
     display: none;
     box-shadow: 3px 3px 3px darkgray;
@@ -130,21 +234,23 @@ li.sub-menu:hover ul.sub {
     display: block;
 }
 
-/* CSS HOVER MENU */
+/* CSS HOVER AFTER MENU */
 
-ul.option > li::after {
+ul.option > li > a::after {
     content: "";
     height: 3px;
-    width: 140px;
+    width: 0;
     background-color: black;
     position: absolute;
     bottom: 0;
-    opacity: 0;
+    left: 0;
     text-align: center;
+    transition: all 0.5s ease-in-out;
 }
 
-ul.option > li:hover::after {
-    opacity: 1;
+ul.option > li > a:hover::after {
+    width: 40%;
+    transform: translateX(100%);
 }
 
 /* CSS HOME PAGE */
@@ -153,224 +259,123 @@ section.courses {
     margin: 20px auto;
 }
 
-div.course > h3 {
+section.courses > div > h3 {
     text-align: center;
     text-transform: uppercase;
     padding: 15px;
-    margin: 4rem !important;
-    background-color: #BBBBBB;
+    margin: 4rem;
+    background-color: var(--hd-color);
 }
 
-div.course-news {
-    background-color: antiquewhite;
-    border: 1px solid #000000;
-    border-radius: 5px;
-}
-
-div.course-news img {
-    width: 80%;
-}
-
-div.course h4 {
-    margin: 15px 0;
-}
-
-/* HOVER COURSE*/
-.hovereffect {
-    width: 100%;
-    height: 90% !important;
-    float: left;
+div.course {
     overflow: hidden;
-    position: relative;
-    text-align: center;
-    cursor: default;
-    margin-bottom: 5px;
 }
 
-.hovereffect > img {
+div.hovercourse img {
     width: 100%;
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+
+div.hovereffect {
+    margin: 11px;
+}
+
+div.hovereffect h4 {
+    text-align: center;
+    margin: 5px 0;
+}
+
+div.hovercourse {
+    position: relative;
+    padding: 20px 10px;
+}
+
+div.hovercourse:hover img {
+    transform: scale(1.1);
+}
+
+div.hovercourse > div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 220px;
 }
     
-.hovereffect .overlay {
-width: 100%;
-height: 100%;
-position: absolute;
-overflow: hidden;
-top: 0;
-left: 0;
-opacity: 0;
-background-color: rgba(255, 255, 255, 0.8);
--webkit-transition: all .4s ease-in-out;
-transition: all .4s ease-in-out
-}
-
-.overlay > p {
-    color: #fff;
-    padding: 10px 10px 0 10px;
-}
-
-.overlay > p:last-child {
-    margin-top: 30px;
-}
-
-.hovereffect img {
-display: block;
-position: relative;
--webkit-transition: all .4s linear;
-transition: all .4s linear;
-}
-
-.hovereffect h2 {
-text-transform: uppercase;
-color:#fff;
-text-align: center;
-position: relative;
-font-size: 17px;
-background:rgba(255, 255, 255, 0.8);
--webkit-transform: translatey(-100px);
--ms-transform: translatey(-100px);
-transform: translatey(-100px);
--webkit-transition: all .2s ease-in-out;
-transition: all .2s ease-in-out;
-padding: 10px;
-}
-
-.hovereffect a.info {
-text-decoration: none;
-display: inline-block;
-text-transform: uppercase;
-color:#fff;
-border: 1px solid #fff;
-background-color: transparent;
-opacity: 0;
-filter: alpha(opacity=0);
--webkit-transition: all .2s ease-in-out;
-transition: all .2s ease-in-out;
-margin: 50px 0 0;
-padding: 7px 14px;
-}
-
-.hovereffect a.info:hover {
-box-shadow: 0 0 5px #fff;
-}
-
-.hovereffect:hover img {
--ms-transform: scale(1.08);
--webkit-transform: scale(1.08);
-transform: scale(1.08);
-}
-
-.hovereffect:hover .overlay {
-opacity: 1;
-filter: alpha(opacity=100);
-}
-
-.hovereffect:hover h2,.hovereffect:hover a.info {
-opacity: 1;
-filter: alpha(opacity=100);
--ms-transform: translatey(0);
--webkit-transform: translatey(0);
-transform: translatey(0);
-}
-
-.hovereffect:hover a.info {
--webkit-transition-delay: .2s;
-transition-delay: .2s;
-}
-
-/* HOVER COURSE */
-.hovereffect {
-    width: 100%;
-    height: 100%;
-    float: left;
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-    cursor: default;
-}
-  
-.hovereffect .overlay {
-    width: 100%;
-    height: 100%;
+div.overlay {
     position: absolute;
-    overflow: hidden;
+    background: rgba(0, 0, 0, 0.4);
     top: 0;
+    bottom: 0;
     left: 0;
-    background-color: rgba(0,0,0,0.6);
+    right: 0;
     opacity: 0;
-    filter: alpha(opacity=0);
-    -webkit-transform: translate(460px, -100px) rotate(180deg);
-    -ms-transform: translate(460px, -100px) rotate(180deg);
-    transform: translate(460px, -100px) rotate(180deg);
-    -webkit-transition: all 0.2s 0.4s ease-in-out;
-    transition: all 0.2s 0.4s ease-in-out;
-}
-  
-.hovereffect img {
-    display: block;
-    position: relative;
-    -webkit-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in;
-}
-  
-.hovereffect h2 {
-    text-transform: uppercase;
-    color: #fff;
-    text-align: center;
-    position: relative;
-    font-size: 17px;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.9);
-}
-  
-.hovereffect a.info {
-    display: inline-block;
-    text-decoration: none;
-    padding: 7px 14px;
-    text-transform: uppercase;
-    color: #fff;
-    border: 1px solid #fff;
-    margin: 10px 0 0 0;
-    background-color: transparent;
-    -webkit-transform: translateY(-200px);
-    -ms-transform: translateY(-200px);
-    transform: translateY(-200px);
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-}
-  
-.hovereffect a.info:hover {
-    box-shadow: 0 0 5px #fff;
-}
-  
-.hovereffect:hover .overlay {
-    opacity: 1;
-    filter: alpha(opacity=100);
-    -webkit-transition-delay: 0s;
-    transition-delay: 0s;
-    -webkit-transform: translate(0px, 0px);
-    -ms-transform: translate(0px, 0px);
-    transform: translate(0px, 0px);
-}
-  
-.hovereffect:hover h2 {
-    -webkit-transform: translateY(0px);
-    -ms-transform: translateY(0px);
-    transform: translateY(0px);
-    -webkit-transition-delay: 0.5s;
-    transition-delay: 0.5s;
-}
-  
-.hovereffect:hover a.info {
-    -webkit-transform: translateY(0px);
-    -ms-transform: translateY(0px);
-    transform: translateY(0px);
-    -webkit-transition-delay: 0.3s;
-    transition-delay: 0.3s;
+    transition: all 0.4s ease-in-out;
 }
 
-div.course h4 {
+div.overlay p {
+    padding: 15px;
+    color: #EEE;
     text-align: center;
+}
+
+a.info {
+    color: #EEE;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+}
+
+a.info > input {
+    width: 100px;
+}
+
+div.hovereffect:hover div.overlay {
+    opacity: 1;
+}
+
+.consulting {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.consulting h3 {
+    text-align: center;
+    margin: 1rem;
+}
+
+.list-consulting {
+    list-style-type: none;
+    background-color: #EEE9E9;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 1rem;
+}
+
+.list-consulting i {
+    font-size: 2rem;
+}
+
+.icon-consulting {
+    background-color: #0098C1;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    color: #fff;
+}
+
+.list-consulting > li > a {
+    background-color: #BD3589;
+    color: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 20px;
+    text-decoration: none;
 }
 
 /* CSS REVIEWS */
@@ -407,8 +412,7 @@ div.exercise {
     margin-left: 10%;
 }
 
-/* CSS STATISTICAL TABLES */ 
-/* Số tự động chạy */
+/* CSS STATISTICAL TABLES */
 
 div.stati {
     width: 80%;
@@ -437,7 +441,7 @@ h1.title {
 /* CSS FOOTER */
 
 footer {
-    background-color: #B9D3EE;
+    background-color: var(--main-color);
     padding: 5px;
 }
 
@@ -528,6 +532,7 @@ section.afmenu > h1 {
 
 section.afmenu > p {
     margin-left: 4%;
+    margin-top: 10px;
 }
 
 section.afmenu a {
@@ -621,6 +626,7 @@ div.doc img {
 
 div.doc > div {
     position: relative;
+    transition: all 0.2s ease-in-out;
 }
 
 div.doc p {
@@ -691,33 +697,44 @@ section.forum {
 }
 
 div.posts {
-    border-radius: 5px;
-    margin: 10px 0;
-}
-
-div.post {
     background-color: #e4e0e0;
+    margin: 1rem 0;
+    border-radius: 5px;
 }
 
-div.post h4 {
+div.posts h4 {
     background-color: #CCC;
     border-radius: 5px 5px 0 0;
     margin: auto 0;
+    padding: 0.5rem;
 }
 
-div.post-ch {
-    justify-content: space-between;
-    padding: 0.4rem 1.5rem;
+div.post {
+    padding: 0.6rem 1.5rem;
 }
 
-div.post-ch h5, div.post-ch ul, div.post-ch p {
+div.post h5, div.post ul, div.post p {
     margin: auto 0;
 }
 
-div.post img {
+div.posts img {
     width: 3rem;
     border-radius: 50%;
     margin: 0 10px 0 0;
+}
+
+div.post-new {
+    width: 120px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.post-new > input {
+    border: 0;
+    background: transparent;
+    padding: 3px;
 }
 
 /* CSS PAGE COURSE */
@@ -734,7 +751,12 @@ div.item {
 
 div.item img {
     width: 20%;
-    height: 100%;
+    height: 90%;
+    transition: transform 0.2s ease-in-out;
+}
+
+div.item img:hover {
+    transform: scale(1.08);
 }
 
 div.item ul {
@@ -808,4 +830,1018 @@ a.login-link:hover {
     color: #1DA1F2;
 }
 
+/* CSS REGISTER COURSE */
 
+.my-body {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1.register {
+    text-align: center;
+    background-color: var(--hd-color);
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 2.5vw;
+}
+
+div.re-course {
+    width: 40%;
+    margin: 0 auto;
+}
+
+div.re-course input {
+    width: 100%;
+    height: 40px;
+}
+
+div.re-course input[type=submit] {
+    width: 25%;
+    height: 40px;
+}
+
+.select-cour {
+    width: 100%;
+    height: 40px;
+}
+
+#procedure {
+    margin: 2rem;
+    text-align: center;
+}
+
+.list-step {
+    list-style-type: none;
+    margin: 15px;
+}
+
+.list-step > li {
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.number {
+    padding: 3px 5px;
+    border-radius: 50%;
+    border: 1px solid #333;
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    margin: 0px auto;
+}
+
+.step-name {
+    color: #3d3d3d;
+    font-size: 16px;
+    font-weight: 600;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.step-help {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 430px) {
+    div.item img {
+        display: none;
+    }
+    div.item ul {
+        display: block;
+    }
+
+    div.item input {
+        margin: 8px 12px;
+    }
+}
+
+/* Mobile: width < 480px */
+
+@media only screen and (max-width: 480px)  {
+
+    section.courses {
+        width: 100%;
+    }
+
+    /* nav.menu {
+        justify-content: center;
+    }
+
+    div.logo {
+        display: none;
+    }
+
+    div.acc {
+        display: none;
+    }
+
+    ul.option {
+        width: 85%;
+        flex-direction: column;
+    } 
+     */
+    div.course > div {
+        justify-content: center;
+    }
+
+    section.courses > div > h3 {
+        width: 100%;
+        margin: 0.5rem 0 !important;
+        font-size: 24px;
+    }
+
+    div.hovereffect {
+        width: 90%;
+    }
+
+   div.hovercourse img {
+    width: 65%;
+   }
+
+   div.exercise {
+    margin-left: 0;
+   }
+
+   div.exercise > h5 {
+    margin-left: 1rem;
+   }
+
+   div.reviews {
+    margin: 10px 15px;
+   }
+
+   h1.title {
+    font-size: 3vw;
+   }
+
+   div.stati {
+    width: 100%;
+    padding: 5px;
+    align-items: center;
+    justify-content: space-around;
+   }
+
+   div.stati ul {
+    padding-left: 8px;
+    font-size: 7vw;
+   }
+
+   .consulting {
+    width: 97%;
+   }
+
+   div.my-footer {
+    width: 100%;
+    padding: 10px;
+   }
+
+   div.my-footer > div {
+    width: 100%;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+   }
+
+   ul.social li {
+    font-size: 1.7rem;
+   }
+
+   ul.social li:nth-child(1) a:hover {
+    font-size: 1.8rem;
+   }
+
+    ul.social li:nth-child(2) a:hover {
+        font-size: 1.8rem;
+    }
+
+    ul.social li:nth-child(3) a {
+        border-radius: 5px;
+        padding: 0px 3px;
+    }
+
+    ul.social li:nth-child(3) a:hover {
+        font-size: 1.8rem;
+    }
+
+    ul.social li:nth-child(4) a:hover {
+        font-size: 1.8rem;
+    }
+
+    .list-consulting > li {
+        width: 100% !important;
+        margin-bottom: 2rem !important;
+    }
+
+   div.course h3 {
+    margin: 1.5rem !important;
+   }
+
+   ul.list-consulting > li {
+    width: 30%;
+    margin: 10px;
+    margin: 0 auto;
+   }
+
+   div.find {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 20px;
+   }
+
+   div.find {
+    display: none;
+   }
+
+   section.container > div.item {
+    width: 100%;
+   }
+
+   div.item > div {
+    margin-left: 1.5rem;
+   }
+
+   div.item img {
+    display: none;
+   }
+
+   section.docs > div.doc {
+    width: 100%;
+   }
+
+   div.form {
+    margin: 0 3rem;
+   }
+
+   div.form  input {
+    width: 100%;
+   }
+
+   section.re-doc {
+    width: 100%;
+   }
+
+   section.re-doc textarea {
+    width: 100%;
+    height: 150px;
+   }
+
+   input.send-doc {
+    width: 30% !important;
+   }
+
+   section.forum {
+    width: 97%;
+   }
+
+   div.posts {
+    width: 100%;
+   }
+
+   div.post {
+    display: block;
+    padding: 10px;
+   }
+
+   div.post > h5 {
+    width: 100%;
+    padding: 5px;
+    padding-left: 0;
+   }
+
+   div.post > div {
+    width: 100%;
+   }
+
+   div.post > p {
+    width: 100%;
+   }
+
+   div.post > ul {
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    padding: 5px;
+    padding-left: 0;
+   }
+
+   div.post > ul > li {
+    padding: 5px;
+    margin-right: 10px;
+    padding-left: 0;
+   }
+
+   section.contact {
+    display: block;
+    width: 100%;
+    margin-left: 10px;
+   }
+
+   .contact_r input {
+    width: 100%;
+   }
+
+   .contact_l h1 {
+    font-size: 8vw;
+   }
+
+   #contactContentId {
+    width: 90% !important;
+   }
+
+}
+
+/* Mobile: width > 480 & width < 739px */
+
+@media only screen and (min-width: 480px) and (max-width: 740px) {
+
+    body {
+        width: 100% !important;
+    }
+
+    /* nav.menu {
+        justify-content: center;
+    }
+
+    div.logo {
+        display: none;
+    }
+
+    div.acc {
+        display: none;
+    }
+
+    ul.option {
+        width: 85%;
+        flex-direction: column;
+    }  */
+
+    section.courses {
+        width: 100%;
+    }
+    
+    div.course > div {
+        justify-content: center;
+    }
+
+    section.courses > div > h3 {
+        width: 100%;
+        margin: 1rem 0 !important;
+    }
+
+    div.hovereffect {
+        width: 90%;
+    }
+
+   div.hovercourse img {
+    width: 40%;
+   }
+
+   div.exercise {
+    margin-left: 0;
+   }
+
+   div.exercise > h5 {
+    margin-left: 1rem;
+   }
+
+   div.reviews {
+    margin: 10px 15px;
+   }
+
+   h1.title {
+    font-size: 3vw;
+   }
+
+   div.stati {
+    width: 97%;
+    align-items: center;
+    justify-content: space-around;
+   }
+
+   div.stati ul {
+    padding: 0 1rem;
+   }
+
+   .consulting {
+    width: 97%;
+   }
+
+   div.my-footer {
+    width: 100%;
+    padding: 10px;
+   }
+
+   div.my-footer > div {
+    width: 100%;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+   }
+
+   ul.social li {
+    font-size: 1.7rem;
+   }
+
+   ul.social li:nth-child(1) a:hover {
+    font-size: 1.8rem;
+   }
+
+    ul.social li:nth-child(2) a:hover {
+        font-size: 1.8rem;
+    }
+
+    ul.social li:nth-child(3) a {
+        border-radius: 5px;
+        padding: 0px 3px;
+    }
+
+    ul.social li:nth-child(3) a:hover {
+        font-size: 1.8rem;
+    }
+
+    ul.social li:nth-child(4) a:hover {
+        font-size: 1.8rem;
+    }
+
+    .list-consulting > li {
+        width: 100% !important;
+        margin-bottom: 2rem !important;
+    }
+
+   div.course h3 {
+    margin: 1.5rem !important;
+   }
+
+   ul.list-consulting > li {
+    width: 30%;
+    margin: 10px;
+    margin: 0 auto;
+   }
+
+   div.find {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 20px;
+   }
+
+   div.find {
+    display: none;
+   }
+
+   section.container > div.item {
+    width: 100%;
+   }
+
+   div.item > div {
+    margin-left: 1.5rem;
+   }
+
+   div.item img {
+    display: none;
+   }
+
+   section.docs > div.doc {
+    width: 70%;
+    margin: 0 auto;
+   }
+
+   div.form {
+    margin: 0 3rem;
+   }
+
+   div.form  input {
+    width: 300px;
+   }
+
+   section.re-doc {
+    width: 100%;
+   }
+
+   section.re-doc textarea {
+    width: 350px;
+    height: 200px;
+   }
+
+   input.send-doc {
+    width: 20% !important;
+   }
+
+   div.form {
+    margin: 0 3rem;
+   }
+
+   div.form  input {
+    width: 100%;
+   }
+
+   section.re-doc {
+    width: 100%;
+   }
+
+   section.re-doc textarea {
+    width: 100%;
+    height: 150px;
+   }
+
+   input.send-doc {
+    width: 30% !important;
+   }
+
+   section.forum {
+    width: 97%;
+   }
+
+   div.posts {
+    width: 100%;
+   }
+
+   div.post {
+    display: block;
+    padding: 10px;
+   }
+
+   div.post > h5 {
+    width: 100%;
+    padding: 5px;
+    padding-left: 0;
+   }
+
+   div.post > div {
+    width: 100%;
+   }
+
+   div.post > p {
+    width: 100%;
+   }
+
+   div.post > ul {
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    padding: 5px;
+    padding-left: 0;
+   }
+
+   div.post > ul > li {
+    padding: 5px;
+    margin-right: 10px;
+    padding-left: 0;
+   }
+
+   section.contact {
+    display: block;
+    width: 100%;
+    margin-left: 10px;
+   }
+
+   .contact_r input {
+    width: 100%;
+   }
+
+   .contact_l h1 {
+    font-size: 8vw;
+   }
+
+   #contactContentId {
+    width: 90% !important;
+   }
+
+}
+
+/* Tablet mini: width >= 740px & < 900px */
+
+@media only screen and (min-width: 740px) and (max-width: 900px) {
+    
+    body {
+        width: 100% !important;
+    }
+
+    /* nav.menu {
+        justify-content: center;
+    }
+
+    div.logo {
+        display: none;
+    }
+
+    div.acc {
+        display: none;
+    }
+
+    ul.option {
+        width: 85%;
+        flex-direction: column;
+    }  */
+    
+    ul.option > li > a {
+        padding-left: 2;
+        padding-right: 2;
+        min-width: 100px;
+        
+    }
+
+    div.find {
+        display: none;
+    }
+   
+    ul.acc__list {
+        right: -10px;
+    }
+
+    ul.acc__list li {
+        width: 120px;
+    }
+
+    section.courses {
+        width: 100%;
+    }
+    
+    div.course > div {
+        justify-content: center;
+    }
+   
+    div.hovereffect {
+        width: 47%;
+   }
+
+   div.hovercourse img {
+    width: 60%;
+   }
+
+   div.reviews {
+    margin: 10px 15px;
+   }
+
+   h1.title {
+    font-size: 3vw;
+   }
+
+   div.stati {
+    width: 97%;
+    align-items: center;
+    justify-content: space-around;
+   }
+
+   div.stati ul {
+    padding: 0 1rem;
+   }
+
+   .consulting {
+    width: 97%;
+   }
+
+   div.my-footer {
+    width: 100%;
+    padding: 10px;
+   }
+
+   ul.social li {
+    font-size: 1.2rem;
+   }
+
+   ul.social li:nth-child(1) a:hover {
+    font-size: 1.3rem;
+   }
+
+    ul.social li:nth-child(2) a:hover {
+        font-size: 1.3rem;
+    }
+
+    ul.social li:nth-child(3) a {
+        border-radius: 5px;
+        padding: 0px 2px;
+    }
+
+    ul.social li:nth-child(3) a:hover {
+        font-size: 1.3rem;
+    }
+
+    ul.social li:nth-child(4) a:hover {
+        font-size: 1.3rem;
+    }
+
+   div.course h3 {
+    margin: 1.5rem !important;
+   }
+
+   ul.list-consulting > li {
+    width: 30%;
+    margin: 10px;
+    margin: 0 auto;
+   }
+
+   div.find {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 20px;
+   }
+
+   div.find {
+    display: none;
+   }
+
+   section.container > div.item {
+    width: 100%;
+   }
+
+   section.docs > div.doc {
+    width: 48%;
+   }
+
+   section.re-doc {
+    width: 100%;
+   }
+
+   section.re-doc textarea {
+    width: 350px;
+    height: 200px;
+   }
+
+   input.send-doc {
+    width: 15% !important;
+   }
+
+   div.form {
+    margin: 0 3rem;
+   }
+
+   div.form  input {
+    width: 100%;
+   }
+
+   section.re-doc {
+    width: 100%;
+   }
+
+   section.re-doc textarea {
+    width: 100%;
+    height: 150px;
+   }
+
+   input.send-doc {
+    width: 20% !important;
+   }
+
+   section.forum {
+    width: 97%;
+   }
+
+   div.posts {
+    width: 100%;
+   }
+
+   div.post > div {
+    width: 40%;
+   }
+
+   div.post h5 {
+    width: 60%;
+   }
+
+   div.post > ul {
+    width: 40%;
+    display: flex;
+    list-style-type: none;
+   }
+
+   div.post > ul > li {
+    padding: 0 10px;
+   }
+
+   div.post > p {
+    width: 50%;
+   }
+
+   section.contact {
+    display: block;
+    width: 100%;
+    margin-left: 5%;
+   }
+
+   .contact_r input {
+    width: 100%;
+   }
+
+   .contact_l h1 {
+    font-size: 8vw;
+   }
+
+   #contactContentId {
+    width: 90% !important;
+   }
+
+   #search-respon {
+    display: block !important;
+   }
+
+}
+
+/* Tablet: width >= 900px & < 1200px */ 
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
+    body {
+        width: 100% !important;
+    }
+
+    ul.option {
+        width: 85%;
+    } 
+    
+    ul.option > li > a {
+        padding-left: 2;
+        padding-right: 2;
+        min-width: 100px;
+    }
+
+    div.find {
+        display: none;
+    }
+   
+    ul.acc__list {
+        right: -5px;
+    }
+
+    ul.acc__list li {
+        width: 120px;
+    }
+
+    section.courses {
+        width: 100%;
+    }
+   
+    div.course > div {
+        justify-content: center;
+    }
+
+    div.hovereffect {
+        width: 30%;
+   }
+
+   div.hovercourse img {
+    width: 70%;
+   }
+
+   div.reviews {
+    margin: 10px 15px;
+   }
+
+   h1.title {
+    font-size: 4vw;
+   }
+
+   div.stati {
+    width: 97%;
+    align-items: center;
+    justify-content: space-around;
+   }
+
+   div.stati ul {
+    padding: 0 1rem;
+   }
+
+   .consulting {
+    width: 97%;
+   }
+
+   div.my-footer {
+    width: 100%;
+    padding: 10px;
+   }
+
+   ul.social li {
+    font-size: 1.6rem;
+   }
+
+   ul.social li:nth-child(1) a:hover {
+    font-size: 1.7rem;
+   }
+
+    ul.social li:nth-child(2) a:hover {
+        font-size: 1.7rem;
+    }
+
+    ul.social li:nth-child(3) a {
+        border-radius: 5px;
+        padding: 0px 3px;
+    }
+
+    ul.social li:nth-child(3) a:hover {
+        font-size: 1.3rem;
+    }
+
+    ul.social li:nth-child(4) a:hover {
+        font-size: 1.7rem;
+    }
+
+   ul.list-consulting > li {
+    width: 30%;
+    margin: 10px;
+    margin: 0 auto;
+   }
+
+   div.find {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 20px;
+   }
+
+   div.find {
+    display: none;
+   }
+
+   section.container > div.item {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+   }
+
+   section.docs > div.doc {
+    width: 48%;
+   }
+
+   section.re-doc {
+    width: 100%;
+   }
+
+   section.re-doc textarea {
+    width: 400px;
+    height: 250px;
+   }
+
+   input.send-doc {
+    width: 15% !important;
+   }
+
+   div.form {
+    margin-left: 25%;
+   }
+
+   div.form input {
+    width: 60%;
+   }
+
+   section.contact {
+    display: block;
+   }
+}
+
+
+/* CSS */
+
+#toggle_menu {
+    position: fixed;
+    top: 100px;
+    left: 0px;
+    background-color: var(--main-color);
+    width: 200px;
+    height: 400px;
+    z-index: 1;
+    border-radius: 0 10px 10px 0;
+    transition: all ease-in-out 0.5s;
+}
+
+.option.flex.respon {
+    transition: linear 0.5s;
+}
+
+ul.sub.respon {
+    width: 200px;
+}
+
+.toggle_menu_icon {
+    position: absolute;
+    top: 10px;
+    right: -35px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    transition: linear 0.2s;
+}
+
+.toggle_menu.hide {
+    width: 0;
+}
+
+.toggle_menu_icon:hover .toggle_menu {
+    left: 500px;
+}

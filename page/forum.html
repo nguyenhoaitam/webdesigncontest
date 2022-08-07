@@ -6,7 +6,7 @@
     <meta name="description" content="Hổ trợ học lập trình">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TECHNOLOGY - Học lập trình</title>
+    <title>TECHNO - Học lập trình</title>
     <link rel="shortcut icon" href="../images/shortcut-icon.jpg">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
@@ -15,10 +15,10 @@
 </head>
 <body>
     <nav class="menu flex">
-        <div class="col12 logo">
+        <div class="col10 logo">
             <a href="../index.html"><img src="../images/logo.png" alt="logo"></a>
         </div>
-        <ul class="option flex col48">
+        <ul class="option flex col65">
             <li>
                 <a href="../index.html">
                     <i class="fa-solid fa-house"></i>
@@ -75,20 +75,27 @@
             </li>
         </ul>
 
-        <div class="find col25">
-            <input type="text" id="kw" placeholder="Nhập ngôn ngữ muốn học...">
-            <button id="btn-search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
+        <div class="find col20">
+            <form action="" id="search-box">
+                <input type="text" name="" id="search-text" placeholder="Bạn muốn tìm gì?" required>
+                <button id="search-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
         </div>
 
-        <div class="acc col15">
-            <a href="login.html">
-                <input type="submit" value="Đăng nhập">
+        <div class="acc col5">
+            <a href="#">
+                <i class="fa-solid fa-circle-user"></i>
             </a>
-            <a href="signup.html">
-                <input type="submit" value="Đăng ký">
-            </a>
+            <ul class="acc__list">
+                <li>
+                    <a href="login.html">Đăng nhập</a>
+                </li>
+                <li>
+                    <a href="signup.html">Đăng ký</a>
+                </li>
+            </ul>
         </div>
     </nav>
 
@@ -105,165 +112,190 @@
             <input type="submit" name="" id="" value="Bài viết mới">
         </div>
 
-       <div class="posts">
-            <div class="post">
-                <h4>C/C++</h4>
-                <div class="flex post-ch">
-                    <div class="flex">
-                        <div>
-                            <img src="../images/avt/avt5.png" alt="">
-                        </div>
-                        <div>
-                            <a href="#">ABC</a>
-                            <p>Ngày 28/06/2022 lúc 19:34</p>
-                        </div>
-                    </div>
-                    <h5><a href="#">Hỏi về mảng trong C++</a></h5>
-                    <ul>
-                        <li>Thích: 15</li>
-                        <li>Bình luận: 7</li>
-                    </ul>
-                    <p>Bình luận gần nhất bởi: <a href="#">Thanh An</a></p>
-                </div>
+        <div class="posts">
 
-                <div class="flex post-ch">
-                    <div class="flex">
-                        <div>
-                            <img src="../images/avt/avt6.png" alt="">
-                        </div>
-                        <div>
-                            <a href="#">Văn An</a>
-                            <p>Ngày 15/05/2022 lúc 14:37</p>
-                        </div>
-                    </div>
-                    <h5><a href="#">Giúp mình bài tập struct</a></h5>
-                    <ul>
-                        <li>Thích: 5</li>
-                        <li>Bình luận: 11</li>
-                    </ul>
-                    <p>Bình luận gần nhất bởi: <a href="#">Thanh</a></p>
-                </div>
+            <h4>Lập trình C/C++</h4>
 
-                <div class="flex post-ch">
-                    <div class="flex">
-                        <div>
-                            <img src="../images/avt/avt7.png" alt="">
-                        </div>
-                        <div>
-                            <a href="#">Anh</a>
-                            <p>Ngày 10/04/2022 lúc 17:34</p>
-                        </div>
-                    </div>
-                    <h5><a href="#">Giúp mình kiểm tra lỗi chương trình này</a></h5>
-                    <ul>
-                        <li>Thích: 4</li>
-                        <li>Bình luận: 15</li>
-                    </ul>
-                    <p>Bình luận gần nhất bởi: <a href="#">ABC</a></p>
-                </div>
-            </div>
-       </div>
-
-       <div class="posts">
-        <div class="post">
-            <h4>Web</h4>
-            <div class="flex post-ch">
-                <div class="flex">
+            <div class="flex post">
+                <div class="flex col20">
                     <div>
-                        <img src="../images/avt/avt7.png" alt="">
+                        <img src="../images/avt/avt5.png" alt="avt">
                     </div>
                     <div>
-                        <a href="#">ABC</a>
-                        <p>Ngày 28/07/2022 lúc 19:00</p>
+                        <a href="#">Thanh Vu</a>
+                        <p>28/06/2022 | 19:34</p>
                     </div>
                 </div>
-                <h5><a href="#">Xin tài liệu học web</a></h5>
-                <ul>
-                    <li>Thích: 1</li>
+                <h5 class="col40"><a href="#">Hỏi về mảng trong C++</a></h5>
+                <ul class="col15">
+                    <li>Thích: 15</li>
                     <li>Bình luận: 7</li>
                 </ul>
-                <p>Bình luận gần nhất bởi: <a href="#">Van</a></p>
+                <p class="col25">Bình luận gần nhất bởi: <a href="#">Thanh An</a></p>
             </div>
 
-            <div class="flex post-ch">
-                <div class="flex">
+            <div class="flex post">
+                <div class="flex col20">
                     <div>
-                        <img src="../images/avt/avt9.png" alt="">
-                    </div>
-                    <div>
-                        <a href="#">X</a>
-                        <p>Ngày 18/06/2022 lúc 00:37</p>
-                    </div>
-                </div>
-                <h5><a href="#">Cách tạo hiệu ứng trong CSS</a></h5>
-                <ul>
-                    <li>Thích: 5</li>
-                    <li>Bình luận: 11</li>
-                </ul>
-                <p>Bình luận gần nhất bởi: <a href="#">Thanh</a></p>
-            </div>
-
-            <div class="flex post-ch">
-                <div class="flex">
-                    <div>
-                        <img src="../images/avt/avt1.jpg" alt="">
+                        <img src="../images/avt/avt6.png" alt="avt">
                     </div>
                     <div>
                         <a href="#">Văn An</a>
-                        <p>Ngày 18/05/2022 lúc 07:34</p>
+                        <p>15/05/2022 | 14:37</p>
                     </div>
                 </div>
-                <h5><a href="#">Làm sao để chuyển các khôi nằm ngang</a></h5>
-                <ul>
+                <h5 class="col40"><a href="#">Giúp mình bài tập struct</a></h5>
+                <ul class="col15">
+                    <li>Thích: 5</li>
+                    <li>Bình luận: 11</li>
+                </ul>
+                <p class="col25">Bình luận gần nhất bởi: <a href="#">Thanh</a></p>
+            </div>
+
+            <div class="flex post">
+                <div class="flex col20">
+                    <div>
+                        <img src="../images/avt/avt7.png" alt="avt">
+                    </div>
+                    <div>
+                        <a href="#">Anh</a>
+                        <p>10/04/2022 | 17:34</p>
+                    </div>
+                </div>
+                <h5 class="col40"><a href="#">Giúp mình kiểm tra lỗi chương trình này</a></h5>
+                <ul class="col15">
+                    <li>Thích: 4</li>
+                    <li>Bình luận: 15</li>
+                </ul>
+                <p class="coll25">Bình luận gần nhất bởi: <a href="#">Toàn</a></p>
+            </div>
+
+        </div>
+
+        <div class="posts">
+
+            <h4>Lập trình Web</h4>
+
+            <div class="flex post">
+                <div class="flex col20">
+                    <div>
+                        <img src="../images/avt/avt7.png" alt="avt">
+                    </div>
+                    <div>
+                        <a href="#">Nguyễn Oanh</a>
+                        <p>28/07/2022 | 19:00</p>
+                    </div>
+                </div>
+                <h5 class="col40"><a href="#">Xin tài liệu học web</a></h5>
+                <ul class="col15">
+                    <li>Thích: 1</li>
+                    <li>Bình luận: 7</li>
+                </ul>
+                <p class="col25">Bình luận gần nhất bởi: <a href="#">Van Linh</a></p>
+            </div>
+
+            <div class="flex post">
+                <div class="flex col20">
+                    <div>
+                        <img src="../images/avt/avt9.png" alt="avt">
+                    </div>
+                    <div>
+                        <a href="#">Trần Tuấn</a>
+                        <p>18/06/2022 | 00:37</p>
+                    </div>
+                </div>
+                <h5 class="col40"><a href="#">Cách tạo hiệu ứng trong CSS</a></h5>
+                <ul class="col15">
+                    <li>Thích: 5</li>
+                    <li>Bình luận: 11</li>
+                </ul>
+                <p class="col25">Bình luận gần nhất bởi: <a href="#">Thanh Mai</a></p>
+            </div>
+
+            <div class="flex post">
+                <div class="flex col20">
+                    <div>
+                        <img src="../images/avt/avt1.jpg" alt="avt">
+                    </div>
+                    <div>
+                        <a href="#">Văn An</a>
+                        <p>18/05/2022 | 07:34</p>
+                    </div>
+                </div>
+                <h5 class="col40"><a href="#">Làm sao để chuyển các khôi nằm ngang</a></h5>
+                <ul class="col15">
                     <li>Thích: 4</li>
                     <li>Bình luận: 3</li>
                 </ul>
-                <p>Bình luận gần nhất bởi: <a href="#">Tu</a></p>
+                <p class="col25">Bình luận gần nhất bởi: <a href="#">Tu</a></p>
             </div>
         </div>
-   </div>
 
-   <div class="posts">
-    <div class="post">
-        <h4>Câu hỏi khác</h4>
-        <div class="flex post-ch">
-            <div class="flex">
-                <div>
-                    <img src="../images/avt/avt2.jpg" alt="">
+        <div class="posts">
+
+            <h4>Lập trình Python</h4>
+
+            <div class="flex post">
+                <div class="flex col20">
+                    <div>
+                        <img src="../images/avt/avt7.png" alt="avt">
+                    </div>
+                    <div>
+                        <a href="#">Anh</a>
+                        <p>10/04/2022 | 17:34</p>
+                    </div>
                 </div>
-                <div>
-                    <a href="#">Nguyễn Văn A</a>
-                    <p>Ngày 28/07/2022 lúc 11:54</p>
-                </div>
+                <h5 class="col40"><a href="#">Giúp mình kiểm tra lỗi chương trình này</a></h5>
+                <ul class="col15">
+                    <li>Thích: 4</li>
+                    <li>Bình luận: 15</li>
+                </ul>
+                <p class="coll25">Bình luận gần nhất bởi: <a href="#">Toàn</a></p>
             </div>
-            <h5><a href="#">Tư vấn mua laptop học lập trình</a></h5>
-            <ul>
-                <li>Thích: 15</li>
-                <li>Bình luận: 25</li>
-            </ul>
-            <p>Bình luận gần nhất bởi: <a href="#">An</a></p>
+
         </div>
 
-        <div class="flex post-ch">
-            <div class="flex">
-                <div>
-                    <img src="../images/avt/avt3.jpg" alt="">
-                </div>
-                <div>
-                    <a href="#">Văn An</a>
-                    <p>Ngày 17/05/2022 lúc 08:37</p>
-                </div>
-            </div>
-            <h5><a href="#">Cách học lập trình tốt cho người mới</a></h5>
-            <ul>
-                <li>Thích: 5</li>
-                <li>Bình luận: 42</li>
-            </ul>
-            <p>Bình luận gần nhất bởi: <a href="#">Bê</a></p>
-        </div>
+        <div class="posts">
 
-    </div>
-</div>
+            <h4>Câu hỏi khác</h4>
+
+            <div class="flex post">
+                <div class="flex col20">
+                    <div>
+                        <img src="../images/avt/avt2.jpg" alt="avt">
+                    </div>
+                    <div>
+                        <a href="#">Trần Văn Quân</a>
+                        <p>01/07/2022 | 11:54</p>
+                    </div>
+                </div>
+                <h5 class="col40"><a href="#">Tư vấn mua laptop học lập trình</a></h5>
+                <ul class="col15">
+                    <li>Thích: 15</li>
+                    <li>Bình luận: 25</li>
+                </ul>
+                <p class="col25">Bình luận gần nhất bởi: <a href="#">An Tran</a></p>
+            </div>
+    
+            <div class="flex post">
+                <div class="flex col20">
+                    <div>
+                        <img src="../images/avt/avt3.jpg" alt="avt">
+                    </div>
+                    <div>
+                        <a href="#">Văn An</a>
+                        <p>17/05/2022 | 08:37</p>
+                    </div>
+                </div>
+                <h5 class="col40"><a href="#">Cách học lập trình tốt cho người mới</a></h5>
+                <ul class="col15">
+                    <li>Thích: 5</li>
+                    <li>Bình luận: 42</li>
+                </ul>
+                <p class="col25">Bình luận gần nhất bởi: <a href="#">Bình</a></p>
+            </div>
+
+        </div>
 
     </section>
     <footer>
@@ -277,7 +309,7 @@
                     </li>
                     <li>
                         <i class="fa-solid fa-envelope"></i>
-                        <a href="mailto:nguyenhoaitam16082003@gmail.com">nguyenhoaitam16082003@gmail.com</a>
+                        <a href="mailto:techno.edu@gmail.com">techno.edu@gmail.com</a>
                     </li>
                     <li>
                         <i class="fa-solid fa-house-chimney"></i>

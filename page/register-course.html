@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="học tập, it, lập trình, hỗ trợ lập trình, c++, c, html, css, javascript">
+    <meta name="description" content="Hổ trợ học lập trình">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECHNO - Học lập trình</title>
+    <link rel="shortcut icon" href="../images/shortcut-icon.jpg">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body class="my-body">
+    <h1 class="register">Đăng ký khóa học</h1>
+    <div class="re-course">
+        <p>
+            <label>
+                Họ và tên<sup>(*)</sup>
+                <br>
+                <span>
+                    <input type="text" name="" id="RegisterNameId">
+                </span>
+            </label>
+        </p>
+        <p>
+            <label>
+                Email<sup>(*)</sup>
+                <br>
+                <span>
+                    <input type="email" name="" id="RegisterEmailId">
+                </span>
+            </label>
+        </p>    
+        <p>
+            <label>
+                Số điện thoại<sup>(*)</sup>
+                <br>
+                <span>
+                    <input type="text" name="" id="RegisterPhoneId">
+                </span>
+            </label>
+        </p>
+        <p>
+            <label name="course">
+                Khóa học bạn đăng ký
+                <br>
+                <span>
+                    <select class="select-cour"  id="RegisterCourseId">
+                        <option value="c++30">Khóa học làm chủ C++ trong 30 ngày</option>
+                        <option value="webcb">Khóa học học lập trình Web cơ bản</option>
+                        <option value="webdl">Khóa học lập trình Web đi làm</option>
+                        <option value="c#">Khóa học làm chủ C#</option>
+                        <option value="java">Khóa học nhập môn Java</option>
+                        <option value="python">Khóa học Python cho người mới bắt đầu</option>
+                        <option value="ruby">Khóa học Ruby cấp tốc</option>
+                        <option value="c++nc">Khóa học C++ nâng cao</option>
+                        <option value="javanc">Khóa học nhập Java nâng cao</option>
+                        <option value="thvp">Khóa học tin học văn phòng</option>
+                        <option value="ccb">Khóa học lập trình C căn bản</option>
+                        <option value="cnc">Khóa học lập trình C nâng cao</option>
+                    </select>
+                </span>
+            </label>
+        </p> 
+        <input type="submit" value="Đăng ký" onclick="registerCourse()">
+    </div>
+
+    <div>
+        <h3 id="procedure">Quy trình đăng ký khóa học</h3>
+
+        <ul class="list-step flex">
+            <li class="col33">
+                <span class="number">1</span>
+                <span class="step-name">Nghe tư vấn</span>
+                <p class="step-help">Nếu bạn chưa chọn được khóa học phù hợp, hãy liên hệ với TECHNO để chúng tôi tư vấn lộ trình học cho bạn</p>
+            </li>
+            
+
+            <li class="col33">
+                <span class="number">2</span>
+                <span class="step-name">Đăng ký</span>
+                <p class="step-help">Bạn chọn khóa học sau đó nhấn nút Đăng ký khóa học và làm theo hướng dẫn</p>
+            </li>
+
+            <li class="col33">
+                <span class="number">3</span>
+                <span class="step-name">Thanh toán</span>
+                <p class="step-help">Bạn tiến hành thanh toán khóa học qua chuyển khoản hoặc nhận tại nhà</p>
+            </li>
+
+            <li class="col33">
+                <span class="number">4</span>
+                <span class="step-name">Kích hoạt tài khoản</span>
+                <p class="step-help">Sau khi thanh toán thành công bạn nhận được hướng dẫn kích hoạt khóa học qua email</p>
+            </li>
+
+            <li class="col33">
+                <span class="number">5</span>
+                <span class="step-name">Vào nhóm hổ trợ</span>
+                <p class="step-help">Bạn sẽ được thêm vào nhóm để hổ trợ học tập cùng với nhận những bài tập sau buổi học</p>
+            </li>
+
+            <li class="col33">
+                <span class="number">6</span>
+                <span class="step-name">Bắt đầu học</span>
+                <p class="step-help">Cuối cùng bạn chỉ cần nhấn vào nút học để bắt đầu học</p>
+            </li>
+        </ul>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script src="../js/main.js"></script>
+
+</html>

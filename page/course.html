@@ -6,7 +6,7 @@
     <meta name="description" content="Hổ trợ học lập trình">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TECHNOLOGY - Học lập trình</title>
+    <title>TECHNO - Học lập trình</title>
     <link rel="shortcut icon" href="../images/shortcut-icon.jpg">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
@@ -15,10 +15,10 @@
 </head>
 <body>
     <nav class="menu flex">
-        <div class="col12 logo">
+        <div class="col10 logo">
             <a href="../index.html"><img src="../images/logo.png" alt="logo"></a>
         </div>
-        <ul class="option flex col48">
+        <ul class="option flex col65">
             <li>
                 <a href="../index.html">
                     <i class="fa-solid fa-house"></i>
@@ -75,20 +75,27 @@
             </li>
         </ul>
 
-        <div class="find col25">
-            <input type="text" id="kw" placeholder="Nhập ngôn ngữ muốn học...">
-            <button id="btn-search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
+        <div class="find col20">
+            <form action="" id="search-box">
+                <input type="text" name="" id="search-text" placeholder="Bạn muốn tìm gì?" required>
+                <button id="search-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
         </div>
 
-        <div class="acc col15">
-            <a href="login.html">
-                <input type="submit" value="Đăng nhập">
+        <div class="acc col5">
+            <a href="#">
+                <i class="fa-solid fa-circle-user"></i>
             </a>
-            <a href="signup.html">
-                <input type="submit" value="Đăng ký">
-            </a>
+            <ul class="acc__list">
+                <li>
+                    <a href="login.html">Đăng nhập</a>
+                </li>
+                <li>
+                    <a href="signup.html">Đăng ký</a>
+                </li>
+            </ul>
         </div>
     </nav>
     
@@ -120,10 +127,10 @@
                     
                 </ul>
                 <h5>
-                    Khóa học làm chủ C++ trong 31 ngày
+                    Khóa học làm chủ C++ trong 30 ngày
                 </h5>
 
-                <input type="button" value="Đăng ký">
+                <input type="button" value="Đăng ký" onclick="registerNewTab()">
             </div>
         </div>
 
@@ -149,7 +156,7 @@
                     Khóa học học lập trình Web cơ bản
                 </h5>
 
-                <input type="button" value="Đăng ký">
+                <input type="button" value="Đăng ký" onclick="registerNewTab()">
             </div>
         </div>
 
@@ -175,7 +182,7 @@
                     Khóa học lập trình Web đi làm
                 </h5>
 
-                <input type="button" value="Đăng ký">
+                <input type="button" value="Đăng ký" onclick="registerNewTab()">
             </div>
         </div>
 
@@ -201,7 +208,7 @@
                     Khóa học làm chủ C#
                 </h5>
 
-                <input type="button" value="Đăng ký">
+                <input type="button" value="Đăng ký" onclick="registerNewTab()">
             </div>
         </div>
 
@@ -227,7 +234,7 @@
                     Khóa học nhập môn Java
                 </h5>
 
-                <input type="button" value="Đăng ký">
+                <input type="button" value="Đăng ký" onclick="registerNewTab()">
             </div>
         </div>
 
@@ -253,7 +260,7 @@
                     Khóa học Python cho người mới bắt đầu
                 </h5>
 
-                <input type="button" value="Đăng ký">
+                <input type="button" value="Đăng ký" onclick="registerNewTab()">
             </div>
         </div>
 
@@ -279,7 +286,7 @@
                     Khóa học Ruby cấp tốc
                 </h5>
 
-                <input type="button" value="Đăng ký">
+                <input type="button" value="Đăng ký" onclick="registerNewTab()">
             </div>
         </div> 
 
@@ -305,7 +312,7 @@
                     Khóa học C++ nâng cao
                 </h5>
 
-                <input type="button" value="Đăng ký">
+                <input type="button" value="Đăng ký" onclick="registerNewTab()">
             </div>
         </div>
 
@@ -331,7 +338,7 @@
                     Khóa học nhập Java nâng cao
                 </h5>
 
-                <input type="button" value="Đăng ký">
+                <input type="button" value="Đăng ký" onclick="registerNewTab()">
             </div>
         </div>
 
@@ -357,7 +364,7 @@
                     Khóa học tin học văn phòng
                 </h5>
 
-                <input type="button" value="Đăng ký">
+                <input type="button" value="Đăng ký" onclick="registerNewTab()">
             </div>
         </div>
 
@@ -383,7 +390,7 @@
                     Khóa học lập trình C căn bản
                 </h5>
 
-                <input type="button" value="Đăng ký">
+                <input type="button" value="Đăng ký" onclick="registerNewTab()">
             </div>
         </div>
 
@@ -409,7 +416,7 @@
                     Khóa học lập trình C nâng cao
                 </h5>
 
-                <input type="button" value="Đăng ký">
+                <input type="button" value="Đăng ký" onclick="registerNewTab()">
             </div>
         </div>
 
@@ -425,7 +432,7 @@
                     </li>
                     <li>
                         <i class="fa-solid fa-envelope"></i>
-                        <a href="mailto:nguyenhoaitam16082003@gmail.com">nguyenhoaitam16082003@gmail.com</a>
+                        <a href="mailto:techno.edu@gmail.com">techno.edu@gmail.com</a>
                     </li>
                     <li>
                         <i class="fa-solid fa-house-chimney"></i>

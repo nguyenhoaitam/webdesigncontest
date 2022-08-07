@@ -6,7 +6,7 @@
     <meta name="description" content="Hổ trợ học lập trình">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TECHNOLOGY - Học lập trình</title>
+    <title>TECHNO - Học lập trình</title>
     <link rel="shortcut icon" href="images/shortcut-icon.jpg">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
@@ -14,11 +14,89 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
     <body>
+    <!-- <div id="toggle_menu">
+
+        <div class="toggle_menu_icon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <ul class="option flex respon">
+            <li>
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    Trang chủ
+                </a>    
+            </li>
+
+            <li class="sub-menu">
+                <a href="page/course.html">
+                    <i class="fa-solid fa-code"></i>
+                    Khóa học
+                </a>
+                <ul class="sub">
+                    <li>
+                        <a href="#">Lập trình C/C++</a>
+                    </li>
+                    <li>
+                        <a href="#">Lập trình Python</a>
+                    </li>
+                    <li>
+                        <a href="#">Lập trình Web</a>
+                    </li>
+                    <li>
+                        <a href="#">Lập trình C#</a>
+                    </li>
+                    <li>
+                        <a href="#">Lập trình Java</a>
+                    </li>
+                    <li>
+                        <a href="#">Lập trình Ruby</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="page/forum.html">
+                    <i class="fa-solid fa-comments"></i>
+                    Diễn đàn
+                </a>    
+            </li>
+
+            <li>
+                <a href="page/document.html">
+                    <i class="fa-solid fa-file"></i>
+                    Tài liệu
+                </a>    
+            </li>
+
+            <li>
+                <a href="page/contact.html">
+                    <i class="fa-solid fa-user"></i>
+                    Liên hệ
+                </a>    
+            </li>
+
+            <li class="sub-menu">
+                <a href="#">
+                    <i class="fa-solid fa-circle-user"></i>
+                    Tài khoản
+                </a>
+                <ul class="sub respon">
+                    <li>
+                        <a href="page/login.html">Đăng nhập</a>
+                    </li>
+                    <li>
+                        <a href="page/signup.html">Đăng ký</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div> -->
     <nav class="menu flex">
-        <div class="col12 logo">
+        <div class="col10 logo">
             <a href="index.html"><img src="images/logo.png" alt="logo"></a>
         </div>
-        <ul class="option flex col48">
+        <ul class="option flex col65">
             <li>
                 <a href="index.html">
                     <i class="fa-solid fa-house"></i>
@@ -75,96 +153,173 @@
             </li>
         </ul>
 
-        <div class="find col25">
-            <input type="text" id="kw" placeholder="Nhập ngôn ngữ muốn học...">
-            <!-- <input type="button" id="btn-search" onclick="search()" value="Tìm"> -->
-            <button id="btn-search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
+        <div class="find col20">
+            <form action="" id="search-box">
+                <input type="text" name="" id="search-text" placeholder="Bạn muốn tìm gì?" required>
+                <button id="search-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
         </div>
 
-        <div class="acc col15">
-            <a href="page/login.html">
-                <input type="submit" value="Đăng nhập">
+        <div class="acc col5">
+            <a href="#">
+                <i class="fa-solid fa-circle-user"></i>
             </a>
-            <a href="page/signup.html">
-                <input type="submit" value="Đăng ký">
-            </a>
+            <ul class="acc__list">
+                <li>
+                    <a href="page/login.html">Đăng nhập</a>
+                </li>
+                <li>
+                    <a href="page/signup.html">Đăng ký</a>
+                </li>
+            </ul>
         </div>
     </nav>
-    <header>
 
-    </header>
     <section class="courses">
+
         <div class="course">
 
             <h3>Khóa học mới</h3>
 
-            <div class="flex course">
+            <div class="flex">
+                <div class="col23 hovereffect">
+                    <div class="hovercourse">
+                        <div>
+                            <img src="images/C++.png" alt="c++">
+                        </div>
+        
+                        <div class="overlay">
+                            <p>Khóa học này cung cấp cho bạn toàn bộ kiến thức nâng cao về ngôn ngữ C/C++.</p>
+                            <a class="info" href="page/register-course.html" target="_blank">
+                                <input type="button" value="Đăng ký">
+                            </a>
+                            <a class="info" href="#">
+                                <input type="button" value="Chi tiết">
+                            </a>
+                            <p>Số bài học: 87</p>
+                        </div>
     
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <div class="hovereffect">
-                        <img class="img-responsive" src="images/C++.png" alt="C++">
-                        <div class="overlay">
-                           <p>Khóa học này cung cấp cho bạn toàn bộ kiến thức căn bản về ngôn ngữ C/C++.</p>
-                           <a class="info" href="#">Đăng ký</a>
-                           <a class="info" href="#">Chi tiết</a>
-                           <p>Số bài học: 76</p>
-                        </div>
                     </div>
-                    <h4>Khóa học C++ căn bản</h4>
+                    
+                    <h4>Khóa học C++ nâng cao</h4>
+    
                 </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <div class="hovereffect">
-                        <img class="img-responsive" src="images/Web.png" alt="Web">
-                        <div class="overlay">
-                           <p>Khóa học này sẽ cung cấp cho bạn toàn bộ kiến thức về HTML, CSS, JS. Sau khóa học bạn có thể tự tay thiết kế một Website cho riêng mình.</p>
-                           <a class="info" href="#">Đăng ký</a>
-                           <a class="info" href="#">Chi tiết</a>
-                           <p>Số bài học: 134</p>
+    
+                <div class="col23 hovereffect">
+                    <div class="hovercourse">
+                        <div>
+                            <img src="images/Web.png" alt="web">
                         </div>
-                    </div>
-                    <h4>Khóa học lập trình Web</h4>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <div class="hovereffect">
-                        <img class="img-responsive" src="images/Python.png" alt="Python">
+        
                         <div class="overlay">
-                           <p>Khóa học này cung cấp cho bạn tất tần tật kiến thức nâng cao của ngôn ngữ Python.</p>
-                           <a class="info" href="#">Đăng ký</a>
-                           <a class="info" href="#">Chi tiết</a>
-                           <p>Số bài học: 36</p>
+                            <p>Khóa học này sẽ cung cấp cho bạn toàn bộ kiến thức CB -> NC về HTML, CSS, JS. Sau khóa học bạn có thể đi làm.</p>
+                            <a class="info" href="page/register-course.html" target="_blank">
+                                <input type="button" value="Đăng ký">
+                            </a>
+                            <a class="info" href="#">
+                                <input type="button" value="Chi tiết">
+                            </a>
+                            <p>Số bài học: 150</p>
                         </div>
+    
                     </div>
-                    <h4>Khóa học Python nâng cao</h4>
+                    
+                    <h4>Khóa học lập trình Web đi làm</h4>
+    
                 </div>
-                
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <div class="hovereffect">
-                        <img class="img-responsive" src="images/Java.png" alt="Java">
-                        <div class="overlay">
-                           <p>Khóa học này cung cấp cho bạn toàn bộ kiến thức căn bản của ngôn ngữ Java</p>
-                           <a class="info" href="#">Đăng ký</a>
-                           <a class="info" href="#">Chi tiết</a>
-                           <p>Số bài học: 78</p>
+    
+                <div class="col23 hovereffect">
+                    <div class="hovercourse">
+                        <div>
+                            <img src="images/C_Sh.png" alt="c#">
                         </div>
-                    </div>
-                    <h4>Khóa học Java căn bản</h4>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <div class="hovereffect">
-                        <img class="img-responsive" src="images/C_Sh.png" alt="C#">
+        
                         <div class="overlay">
                             <p>Khóa học bao gồm tất cả kiến thức về C#, nếu bạn đang quan tâm ngôn ngữ này thì hãy đăng ký học.</p>
-                           <a class="info" href="#">Đăng ký</a>
-                           <a class="info" href="#">Chi tiết</a>
-                           <p>Số bài học: 55</p>
+                            <a class="info" href="page/register-course.html" target="_blank">
+                                <input type="button" value="Đăng ký">
+                            </a>
+                            <a class="info" href="#">
+                                <input type="button" value="Chi tiết">
+                            </a>
+                            <p>Số bài học: 46</p>
                         </div>
+    
                     </div>
-                    <h4>Khóa học C#</h4>
+                    
+                    <h4>Khóa học làm chủ C#</h4>
+    
+                </div>
+    
+                <div class="col23 hovereffect">
+                    <div class="hovercourse">
+                        <div>
+                            <img src="images/Java.png" alt="java">
+                        </div>
+        
+                        <div class="overlay">
+                            <p>Khóa học này cung cấp cho bạn kiến thức nâng cao toàn bộ và đầy đủ nhất của ngôn ngữ Java.</p>
+                            <a class="info" href="page/register-course.html" target="_blank">
+                                <input type="button" value="Đăng ký">
+                            </a>
+                            <a class="info" href="#">
+                                <input type="button" value="Chi tiết">
+                            </a>
+                            <p>Số bài học: 88</p>
+                        </div>
+    
+                    </div>
+                    
+                    <h4>Khóa học nhập Java nâng cao</h4>
+    
+                </div>
+
+                <div class="col23 hovereffect">
+                    <div class="hovercourse">
+                        <div>
+                            <img src="images/img-doc/office.jpg" alt="office">
+                        </div>
+        
+                        <div class="overlay">
+                            <p>Không chỉ học lập trình, nếu bạn muốn thành thạo tin học văn phòng thì đừng chần chờ hãy nhấn đăng ký ngay đi.</p>
+                            <a class="info" href="page/register-course.html" target="_blank">
+                                <input type="button" value="Đăng ký">
+                            </a>
+                            <a class="info" href="#">
+                                <input type="button" value="Chi tiết">
+                            </a>
+                            <p>Số bài học: 30</p>
+                        </div>
+    
+                    </div>
+                    
+                    <h4>Khóa học tin học văn phòng</h4>
+    
+                </div>
+
+                <div class="col23 hovereffect">
+                    <div class="hovercourse">
+                        <div>
+                            <img src="images/C.png" alt="c">
+                        </div>
+        
+                        <div class="overlay">
+                            <p>Khóa học sẽ cung cấp cho bạn toàn bộ kiến thức nâng cao của ngôn ngữ <Cite></Cite></p>
+                            <a class="info" href="page/register-course.html" target="_blank">
+                                <input type="button" value="Đăng ký">
+                            </a>
+                            <a class="info" href="#">
+                                <input type="button" value="Chi tiết">
+                            </a>
+                            <p>Số bài học: 30</p>
+                        </div>
+    
+                    </div>
+                    
+                    <h4>Khóa học lập trình C nâng cao</h4>
+    
                 </div>
 
             </div>
@@ -172,78 +327,153 @@
         </div>
 
         <div class="course">
+
             <h3>Khóa học nổi bật</h3>
 
             <div class="flex">
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <div class="hovereffect">
-                        <img class="img-responsive" src="images/C++.png" alt="C++">
-                        <div class="overlay">
-                           <p>Khóa học này cung cấp cho bạn toàn bộ kiến thức căn bản về ngôn ngữ C/C++.</p>
-                           <a class="info" href="#">Đăng ký</a>
-                           <a class="info" href="#">Chi tiết</a>
-                           <p>Số bài học: 76</p>
+                <div class="col23 hovereffect">
+                    <div class="hovercourse">
+                        <div>
+                            <img src="images/C++.png" alt="C++">
                         </div>
-                    </div>
-                    <h4>Khóa học C++ căn bản</h4>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <div class="hovereffect">
-                        <img class="img-responsive" src="images/C_Sh.png" alt="C#">
+        
                         <div class="overlay">
-                            <p>Khóa học bao gồm tất cả kiến thức về C#, nếu bạn đang quan tâm ngôn ngữ này thì hãy đăng ký học.</p>
-                           <a class="info" href="#">Đăng ký</a>
-                           <a class="info" href="#">Chi tiết</a>
-                           <p>Số bài học: 55</p>
+                            <p>Khóa học này cung cấp cho bạn toàn bộ kiến thức căn bản về ngôn ngữ C/C++.</p>
+                            <a class="info" href="page/register-course.html" target="_blank">
+                                <input type="button" value="Đăng ký">
+                            </a>
+                            <a class="info" href="#">
+                                <input type="button" value="Chi tiết">
+                            </a>
+                            <p>Số bài học: 30</p>
                         </div>
+    
                     </div>
-                    <h4>Khóa học C#</h4>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <div class="hovereffect">
-                        <img class="img-responsive" src="images/Web.png" alt="Web">
-                        <div class="overlay">
-                           <p>Khóa học này sẽ cung cấp cho bạn toàn bộ kiến thức về HTML, CSS, JS. Sau khóa học bạn có thể tự tay thiết kế một Website cho riêng mình.</p>
-                           <a class="info" href="#">Đăng ký</a>
-                           <a class="info" href="#">Chi tiết</a>
-                           <p>Số bài học: 134</p>
-                        </div>
-                    </div>
-                    <h4>Khóa học lập trình Web</h4>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <div class="hovereffect">
-                        <img class="img-responsive" src="images/Ruby.png" alt="Ruby">
-                        <div class="overlay">
-                            <p>Một ngôn ngữ có vẻ xa lạ với bạn, nếu bạn muốn tìm hiểu về ngôn ngữ mới thì để tôi giới thiệu cho bạn.</p>
-                            <a class="info" href="#">Đăng ký</a>
-                           <a class="info" href="#">Chi tiết</a>
-                           <p>Số bài học: 36</p>
-                        </div>
-                    </div>
-                    <h4>Khóa học Ruby</h4>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <div class="hovereffect">
-                        <img class="img-responsive" src="images/Java.png" alt="Java">
-                        <div class="overlay">
-                           <p>Khóa học này cung cấp cho bạn toàn bộ kiến thức nâng cao của ngôn ngữ Java</p>
-                           <a class="info" href="#">Đăng ký</a>
-                           <a class="info" href="#">Chi tiết</a>
-                           <p>Số bài học: 78</p>
-                        </div>
-                    </div>
-                    <h4>Khóa học Java nâng cao</h4>
+                    
+                    <h4>Khóa học làm chủ C++ trong 30 ngày</h4>
+    
                 </div>
     
+                <div class="col23 hovereffect">
+                    <div class="hovercourse">
+                        <div>
+                            <img src="images/Web.png" alt="C++">
+                        </div>
+        
+                        <div class="overlay">
+                            <p>Khóa học này sẽ cung cấp cho bạn toàn bộ kiến thức về HTML, CSS, JS. Sau khóa học bạn có thể tự tay thiết kế một Website cho riêng mình.</p>
+                            <a class="info" href="page/register-course.html" target="_blank">
+                                <input type="button" value="Đăng ký">
+                            </a>
+                            <a class="info" href="#">
+                                <input type="button" value="Chi tiết">
+                            </a>
+                            <p>Số bài học: 92</p>
+                        </div>
+    
+                    </div>
+                    
+                    <h4>Khóa học học lập trình Web cơ bản</h4>
+    
+                </div>
+    
+                <div class="col23 hovereffect">
+                    <div class="hovercourse">
+                        <div>
+                            <img src="images/Ruby.png" alt="ruby">
+                        </div>
+        
+                        <div class="overlay">
+                            <p>Một ngôn ngữ có vẻ xa lạ với bạn, nếu bạn muốn tìm hiểu về ngôn ngữ mới thì để tôi giới thiệu cho bạn.</p>
+                            <a class="info" href="page/register-course.html" target="_blank">
+                                <input type="button" value="Đăng ký">
+                            </a>
+                            <a class="info" href="#">
+                                <input type="button" value="Chi tiết">
+                            </a>
+                            <p>Số bài học: 39</p>
+                        </div>
+    
+                    </div>
+                    
+                    <h4>Khóa học Ruby cấp tốc</h4>
+    
+                </div>
+    
+                <div class="col23 hovereffect">
+                    <div class="hovercourse">
+                        <div>
+                            <img src="images/Java.png" alt="java">
+                        </div>
+        
+                        <div class="overlay">
+                            <p>Khóa học này cung cấp cho bạn toàn bộ kiến thức căn bản của ngôn ngữ Java.</p>
+                            <a class="info" href="page/register-course.html" target="_blank">
+                                <input type="button" value="Đăng ký">
+                            </a>
+                            <a class="info" href="#">
+                                <input type="button" value="Chi tiết">
+                            </a>
+                            <p>Số bài học: 47</p>
+                        </div>
+    
+                    </div>
+                    
+                    <h4>Khóa học nhập môn Java</h4>
+    
+                </div>
+
+                <div class="col23 hovereffect">
+                    <div class="hovercourse">
+                        <div>
+                            <img src="images/Python.png" alt="python">
+                        </div>
+        
+                        <div class="overlay">
+                            <p>Khóa học này cung cấp cho bạn tất tần tật kiến thức căn bản của ngôn ngữ Python.</p>
+                            <a class="info" href="page/register-course.html" target="_blank">
+                                <input type="button" value="Đăng ký">
+                            </a>
+                            <a class="info" href="#">
+                                <input type="button" value="Chi tiết">
+                            </a>
+                            <p>Số bài học: 120</p>
+                        </div>
+    
+                    </div>
+                    
+                    <h4>Khóa học Python cho người mới bắt đầu</h4>
+    
+                </div>
+
+                <div class="col23 hovereffect">
+                    <div class="hovercourse">
+                        <div>
+                            <img src="images/C.png" alt="c">
+                        </div>
+        
+                        <div class="overlay">
+                            <p>Khóa học này cung cấp cho bạn tất tần tật kiến thức căn bản của ngôn ngữ C.</p>
+                            <a class="info" href="page/register-course.html" target="_blank">
+                                <input type="button" value="Đăng ký">
+                            </a>
+                            <a class="info" href="#">
+                                <input type="button" value="Chi tiết">
+                            </a>
+                            <p>Số bài học: 74</p>
+                        </div>
+    
+                    </div>
+                    
+                    <h4>Khóa học lập trình C căn bản</h4>
+    
+                </div>
+
             </div>
+
         </div>
 
-        <div class="course">
+        <div>
             <h3>Bài tập</h3>
 
             <div class="exercise">
@@ -272,7 +502,7 @@
 
         </div>
 
-        <div class="course">
+        <div>
             <h3>Nhận xét từ học viên</h3>
             
             <div class="reviews">
@@ -281,7 +511,7 @@
                         <img src="images/avt/avt2.jpg" alt="avt">
                     </div>
                     <ul>
-                        <li>Nguyễn Văn Bê</li>
+                        <li>Nguyễn Văn An</li>
                         <li>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -293,20 +523,19 @@
                 </div>
                 <p></p>
                 <p>
-                    Một khóa học tuyệt vời của thầy.Khóa học cung cấp kiến thức rất chi tiết về html 5 css 3, với những bạn mới bắt đầu học lập trình web hoặc đang học nhưng chưa hiểu rõ thì đây là một khóa học mình nghĩ là các bạn không nên bỏ qua. Khóa học không những cung cấp cho bạn lộ trình học rất khoa học, kiến thức cơ bản chắc chắn mà còn giúp bạn kỹ năng giao tiếp,sự chuyên nghiệp trong công việc và hơn hết sau mỗi lần làm xong bài tập bạn sẽ được thầy cho những đánh giá,nhận xét để giúp bạn nhận ra lỗi sai và tiến bộ từng ngày.Cảm ơn thầy đã tạo ra Unitop và những khóa học tuyệt vời.Chúc thầy và Unitop ngày càng phát triển và thành công!!
+                    Một khóa học tuyệt vời của thầy.Khóa học cung cấp kiến thức rất chi tiết về html 5 css 3, với những bạn mới bắt đầu học lập trình web hoặc đang học nhưng chưa hiểu rõ thì đây là một khóa học mình nghĩ là các bạn không nên bỏ qua. Khóa học không những cung cấp cho bạn lộ trình học rất khoa học, kiến thức cơ bản chắc chắn mà còn giúp bạn kỹ năng giao tiếp,sự chuyên nghiệp trong công việc và hơn hết sau mỗi lần làm xong bài tập bạn sẽ được thầy cho những đánh giá,nhận xét để giúp bạn nhận ra lỗi sai và tiến bộ từng ngày.Cảm ơn thầy đã tạo ra TECHNO và những khóa học tuyệt vời.Chúc thầy và TECHNO ngày càng phát triển và thành công!!
                 </p>
 
-                <p>Khóa học: <a href="#">Khóa học lập trình Web</a></p>
+                <p>Khóa học: <a href="#">Khóa học lập trình Web đi làm</a></p>
             </div>
-        </div>
 
-        <div class="reviews">
+            <div class="reviews">
                 <div class="flex">
                     <div>
                         <img src="images/avt/avt1.jpg" alt="avt">
                     </div>
                     <ul>
-                        <li>Nguyễn Văn A</li>
+                        <li>Nguyễn Văn Bảo</li>
                         <li>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -316,16 +545,14 @@
                         </li>
                     </ul>
                 </div>
-                <p></p>
                 <p>
                     Khóa học cực kì tuyệt vời anh ạ,kiến thức được sắp xếp hệ thống, dễ hiểu, chi tiết và rất thực tế. Các bài tập thực hành xen lẫn với bài học rất tốt cho việc ghi nhớ kiến thức. Mỗi lần xem xong 1 video là lại muốn cày tiếp 1 video nữa. Em cảm ơn anh đã tạo ra 1 khóa học tốt đến như vậy. Cuối cùng em chúc anh mạnh khỏe, đạt nhiều thành công và tiếp tục hướng dẫn, dìu dắt bọn em ạ
                 </p>
 
-                <p>Khóa học: <a href="#">Khóa học lập trình C++</a></p>
+                <p>Khóa học: <a href="#">Khóa học làm chủ C++ trong 30 ngày</a></p>
             </div>
-        </div>
 
-        <div class="reviews">
+            <div class="reviews">
                 <div class="flex">
                     <div>
                         <img src="images/avt/avt3.jpg" alt="avt">
@@ -341,16 +568,14 @@
                         </li>
                     </ul>
                 </div>
-                <p></p>
-                <p>
-                    Khóa học đầy đủ những thông tin cơ bản nhất. Mọi người nên xem đi xem lại nhiều nếu chậm tiêu giống mình. Mong thầy cho thêm bài tập để mọi người cùng luyện. Cảm ơn thầy về khóa học này. Rất hữu ích.
-                </p>
+                    <p>
+                        Khóa học đầy đủ những thông tin cơ bản nhất. Mọi người nên xem đi xem lại nhiều nếu chậm tiêu giống mình. Mong thầy cho thêm bài tập để mọi người cùng luyện. Cảm ơn thầy về khóa học này. Rất hữu ích.
+                    </p>
 
-                <p>Khóa học: <a href="#">Khóa học lập trình Ruby</a></p>
+                    <p>Khóa học: <a href="#">Khóa học Python cho người mới bắt đầu</a></p>
             </div>
-        </div>
 
-        <div class="reviews">
+            <div class="reviews">
                 <div class="flex">
                     <div>
                         <img src="images/avt/avt4.jpg" alt="avt">
@@ -366,13 +591,13 @@
                         </li>
                     </ul>
                 </div>
-                <p></p>
-                <p>
-                    Thực sự là khóa học rất bổ ích. Bài giảng của thầy chi tiết và dễ hiểu. Quá trình học được thầy review sửa lỗi rất chi tiết. Từ 1 đứa học CNTT nhưng 3 năm ở trường học rời rạc và bị chểnh mảng, mất gốc, bước sang năm 4 may tìm được thầy. Chúc thầy và TECHNOLOGY sẽ phát triển hơn nữa, được nhiều học viên biết đến hơn nữa.
-                </p>
+                    <p>
+                        Thực sự là khóa học rất bổ ích. Bài giảng của thầy chi tiết và dễ hiểu. Quá trình học được thầy review sửa lỗi rất chi tiết. Từ 1 đứa học CNTT nhưng 3 năm ở trường học rời rạc và bị chểnh mảng, mất gốc, bước sang năm 4 may tìm được thầy. Chúc thầy và TECHNO sẽ phát triển hơn nữa, được nhiều học viên biết đến hơn nữa.
+                    </p>
 
-                <p>Khóa học: <a href="#">Khóa học lập trình Java nâng cao   </a></p>
+                    <p>Khóa học: <a href="#">Khóa học làm chủ C#</a></p>
             </div>
+
         </div>
     
     </section>
@@ -401,15 +626,55 @@
                 <i class="fa-solid fa-chalkboard-user"></i>
                 <ul>
                     <li>10+</li>
-                    <li>Giảng viên cấp cao giảng dạy</li>
+                    <li>Giảng viên giảng dạy</li>
                 </ul>
             </div>
+        </div>
+
+        <div class="consulting">
+            <h3>Bạn cần tư vấn?</h3>
+
+            <ul class="flex list-consulting">
+                <li class="col33">
+                    <div class="icon-consulting">
+                        <i class="fa-solid fa-phone-volume"></i>
+                    </div>
+                    <h4>Gọi cho chúng tôi</h4>
+                    <div>
+                        <p>Nếu bạn có thắc mắc gì vui lòng gọi cho chúng tôi qua số 0394873584 (miễn phí)</p>
+                    </div>
+                    <a href="tel:0394873584" target="_blank">Gọi ngay</a>
+                </li>
+
+                <li class="col33">
+                    <div class="icon-consulting">
+                        <i class="fa-brands fa-facebook-messenger"></i>
+                    </div>
+                    <h4>Gửi thắc mắc qua tin nhắn</h4>
+                    <div>
+                        <p>Bạn cũng có thể gửi tin nhắn qua messenger</p>
+                    </div>
+                    <a href="https://www.messenger.com/" target="_blank">Chat ngay</a>
+                </li>
+
+                <li class="col33">
+                    <div class="icon-consulting">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <h4>Hoặc gửi email cho chúng tôi</h4>
+                    <div>
+                       <p>Gửi thắc mắc bạn qua email</p>
+                    </div>
+                    <a href="mailto:techno.edu@gmail.com" target="_blank">Email ngay</a>
+                </li>
+            </ul>
+
         </div>
     </section>
 
     <footer>
         <div class="my-footer flex">
-            <div class="col25">
+            <div class="col25"> 
                 <h1>Liên hệ</h1>
                 <ul>
                     <li>
@@ -418,7 +683,7 @@
                     </li>
                     <li>
                         <i class="fa-solid fa-envelope"></i>
-                        <a href="mailto:nguyenhoaitam16082003@gmail.com">nguyenhoaitam16082003@gmail.com</a>
+                        <a href="mailto:techno.edu@gmail.com">techno.edu@gmail.com</a>
                     </li>
                     <li>
                         <i class="fa-solid fa-house-chimney"></i>
