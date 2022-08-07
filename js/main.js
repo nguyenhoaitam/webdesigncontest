@@ -191,8 +191,6 @@ function receiveDoc() {
   // })
 //}
 
-//tìm kiếm, thêm bài viết, responsive, số tăng, chỉnh lại nút tìm kiếm, menu
-
 
 // const toggle_menu_icon = document.querySelector("toggle_menu_icon");
 // const toggle_menu = document.querySelector("toggle_menu");

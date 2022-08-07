@@ -161,7 +161,7 @@ ul.acc__list {
     position: absolute;
     top: 4rem;
     right: 0.5rem;
-    display: none;
+    display : none;
 }
 
 ul.acc__list::before {
@@ -933,23 +933,60 @@ div.re-course input[type=submit] {
         width: 100%;
     }
 
-    /* nav.menu {
-        justify-content: center;
+    nav.menu {
+        justify-content: space-between;
     }
 
-    div.logo {
-        display: none;
-    }
 
     div.acc {
-        display: none;
+        margin-right: 15px;
     }
 
     ul.option {
-        width: 85%;
+        width: 50%;
         flex-direction: column;
     } 
-     */
+    
+
+     ul.acc__list {
+        top: 10rem;
+        right: 0;
+       }
+    
+       div.find {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin-top: 10px;
+        margin-left: 20px;
+       }
+    
+       div.find {
+        display: none;
+       }
+    
+       div.find_respon {
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    #search_text_respon {
+        width: 85%;
+        padding: 2%;
+        outline: none;
+        border: none;
+        border-radius: 15px;
+    }
+    
+    #search_btn_respon {
+        width: 13%;
+        padding: 2%;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        background: transparent;
+    }
+    
     div.course > div {
         justify-content: center;
     }
@@ -1169,22 +1206,18 @@ div.re-course input[type=submit] {
         width: 100% !important;
     }
 
-    /* nav.menu {
-        justify-content: center;
-    }
-
-    div.logo {
-        display: none;
+    nav.menu {
+        justify-content: space-between;
     }
 
     div.acc {
-        display: none;
+        margin-right: 15px;
     }
 
     ul.option {
-        width: 85%;
+        width: 50%;
         flex-direction: column;
-    }  */
+    } 
 
     section.courses {
         width: 100%;
@@ -1288,6 +1321,11 @@ div.re-course input[type=submit] {
     margin: 0 auto;
    }
 
+   ul.acc__list {
+    top: 10rem;
+    right: 0;
+   }
+
    div.find {
     display: flex;
     justify-content: left;
@@ -1299,6 +1337,28 @@ div.re-course input[type=submit] {
    div.find {
     display: none;
    }
+
+   div.find_respon {
+    width: 70%;
+    margin: 0 auto;
+}
+
+#search_text_respon {
+    width: 85%;
+    padding: 2%;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+}
+
+#search_btn_respon {
+    width: 13%;
+    padding: 2%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+}
 
    section.container > div.item {
     width: 100%;
@@ -1428,22 +1488,14 @@ div.re-course input[type=submit] {
         width: 100% !important;
     }
 
-    /* nav.menu {
-        justify-content: center;
-    }
-
-    div.logo {
-        display: none;
-    }
-
-    div.acc {
-        display: none;
+    nav.menu {
+        justify-content: space-between;
     }
 
     ul.option {
-        width: 85%;
+        width: 40%;
         flex-direction: column;
-    }  */
+    }
     
     ul.option > li > a {
         padding-left: 2;
@@ -1452,12 +1504,39 @@ div.re-course input[type=submit] {
         
     }
 
+    div.acc {
+        margin-right: 10px;
+    }
+
     div.find {
         display: none;
     }
    
+    div.find_respon {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    #search_text_respon {
+        width: 85%;
+        padding: 2%;
+        outline: none;
+        border: none;
+        border-radius: 15px;
+    }
+
+    #search_btn_respon {
+        width: 13%;
+        padding: 2%;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        background: transparent;
+    }
+
     ul.acc__list {
         right: -10px;
+        top: 10rem;
     }
 
     ul.acc__list li {
@@ -1669,6 +1748,28 @@ div.re-course input[type=submit] {
     div.find {
         display: none;
     }
+
+    div.find_respon {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    #search_text_respon {
+        width: 85%;
+        padding: 2%;
+        outline: none;
+        border: none;
+        border-radius: 15px;
+    }
+
+    #search_btn_respon {
+        width: 13%;
+        padding: 2%;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        background: transparent;
+    }
    
     ul.acc__list {
         right: -5px;
@@ -1800,10 +1901,15 @@ div.re-course input[type=submit] {
    }
 }
 
+@media only screen and (min-width: 1200px) {
+    .find_respon {
+        display: none;
+    }
+}
 
 /* CSS */
 
-#toggle_menu {
+/* #toggle_menu {
     position: fixed;
     top: 100px;
     left: 0px;
@@ -1844,4 +1950,4 @@ ul.sub.respon {
 
 .toggle_menu_icon:hover .toggle_menu {
     left: 500px;
-}
+} */
