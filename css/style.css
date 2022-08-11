@@ -65,6 +65,10 @@ body {
     background-image: url(../images/background.png);
 }
 
+input {
+    cursor: pointer;
+}
+
 /* CSS NAV - MENU */
 
 nav.menu {
@@ -351,6 +355,7 @@ div.hovereffect:hover div.overlay {
     padding: 2rem;
     text-align: center;
     border-radius: 1rem;
+    box-shadow: 0 5px 5px gray;
 }
 
 .list-consulting i {
@@ -423,6 +428,7 @@ div.stati {
     background-color: 	#EEE9E9;
     justify-content: space-between;
     border-radius: 15px;
+    box-shadow: 0 5px 5px gray;
 }
 
 div.stati ul {
@@ -711,6 +717,9 @@ div.posts h4 {
 
 div.post {
     padding: 0.6rem 1.5rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid;
+    border-color: #3d3d3d;
 }
 
 div.post h5, div.post ul, div.post p {
@@ -735,6 +744,27 @@ div.post-new > input {
     border: 0;
     background: transparent;
     padding: 3px;
+}
+
+div.post-new-form {
+    margin-top: 1rem;
+}
+
+.post-new-form-lb {
+    display: block;
+    width: 50% !important;
+}
+
+.post-new-form-lb input {
+    width: 100%;
+    padding: 5px 10px;
+}
+
+#post-new-btn {
+    cursor: pointer;
+    padding: 5px 10px;
+    border: none;
+    background-color: lightgray;
 }
 
 /* CSS PAGE COURSE */
@@ -846,7 +876,7 @@ h1.register {
 }
 
 div.re-course {
-    width: 40%;
+    width: 70%;
     margin: 0 auto;
 }
 
@@ -858,6 +888,8 @@ div.re-course input {
 div.re-course input[type=submit] {
     width: 25%;
     height: 40px;
+    display: block;
+    margin: 0 auto;
 }
 
 .select-cour {
@@ -936,7 +968,6 @@ div.re-course input[type=submit] {
     nav.menu {
         justify-content: space-between;
     }
-
 
     div.acc {
         margin-right: 15px;
@@ -1194,6 +1225,23 @@ div.re-course input[type=submit] {
 
    #contactContentId {
     width: 90% !important;
+   }
+
+   .my-body {
+    width: 100%;
+   }
+
+   div.re-course {
+    width: 90%;
+   }
+
+   ul.list-step {
+    display: block;
+    padding: 0;
+   }
+
+   ul.list-step li {
+    width: 100%;
    }
 
 }
@@ -1478,6 +1526,23 @@ div.re-course input[type=submit] {
     width: 90% !important;
    }
 
+   .my-body {
+    width: 100%;
+   }
+
+   div.re-course {
+    width: 90%;
+   }
+
+   ul.list-step {
+    display: block;
+    padding: 0;
+   }
+
+   ul.list-step li {
+    width: 100%;
+   }
+
 }
 
 /* Tablet mini: width >= 740px & < 900px */
@@ -1727,6 +1792,22 @@ div.re-course input[type=submit] {
     display: block !important;
    }
 
+   .my-body {
+    width: 100% !important;
+   }
+
+   div.re-course {
+    width: 90%;
+   }
+
+   ul.list-step {
+    padding: 0;
+   }
+
+   ul.list-step li {
+    width: 50%;
+   }
+
 }
 
 /* Tablet: width >= 900px & < 1200px */ 
@@ -1898,6 +1979,22 @@ div.re-course input[type=submit] {
 
    section.contact {
     display: block;
+   }
+
+   .my-body {
+    width: 80% !important;
+   }
+
+   div.re-course {
+    width: 80%;
+   }
+
+   ul.list-step {
+    padding: 0;
+   }
+
+   ul.list-step li {
+    width: 50%;
    }
 }
 

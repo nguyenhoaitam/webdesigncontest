@@ -198,3 +198,51 @@ function receiveDoc() {
 // toggle_menu_icon.onclick = function() {
 //   toggle_menu.classList.toggle('hide');
 // } 
+
+let images = ['avt1.jpg', 'avt2.jpg', 'avt3.jpg', 'avt4.jpg', 'avt5.png', 'avt6.png', 'avt7.png', 'avt9.png']
+
+function add() {
+  let btn = document.getElementById("post-new-btn");
+
+  btn.addEventListener("click", function() {
+    let name = document.getElementById("post-new-name").value;
+    let question = document.getElementById("post-new-question").value;
+    let idx = parseInt(Math.random() * images.length);
+
+    var d = new Date;
+    var day = d.getDate();
+    var month = d.getMonth() + 1;
+    var year = d.getFullYear();
+
+    var hour = d.getHours();
+    var min = d.getMinutes();
+
+    var dayfull = day + '/' + month + '/' + year + ' | ' + hour + ':' + min;
+
+    let h = 
+    `
+      <div class="flex post">
+        <div class="flex col20">
+          <div>
+            <img src="../images/avt/${images[idx]}" alt="avt">
+          </div>
+          <div>
+            <a href="#">${name}</a>
+            <p>${dayfull}</p>
+          </div>
+        </div>
+        <h5 class="col40"><a href="#">${question}</a></h5>
+        <ul class="col15">
+          <li>Thích: 0</li>
+          <li>Bình luận: 0</li>
+        </ul>
+        <p class="col25">Bình luận gần nhất bởi: <a href="#"></a></p>
+      </div>
+    `
+
+    let m = document.getElementsByClassName("posts")[0];
+    let a = document.querySelector(".post:first-child");
+
+    a.insertAdjacentHTML("beforebegin", h);
+  });
+}
